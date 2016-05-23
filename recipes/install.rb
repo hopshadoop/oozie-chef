@@ -84,8 +84,11 @@ template "oozie-env.sh" do
   group node.oozie.group
   mode 0655
   variables({ 
-        :my_ip => private_ip
-           })
+        :my_ip => private_ip,
+	:my_port => node.oozie.https.port,
+	:my_keystore => node.oozie.keystore,
+	:my_keystore_pass => node.oozie.keystore.password
+        })
 end
 
 

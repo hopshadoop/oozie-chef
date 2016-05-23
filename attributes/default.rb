@@ -12,5 +12,7 @@ default.oozie.systemd                  = "true"
 default.oozie.dir                      = "/srv"
 default.oozie.base_dir                 = "/srv/oozie-" + "#{node.oozie.version}"
 default.oozie.home                     = "/srv/oozie"
-
+default.oozie.https.port	       = 11443
+default.oozie.keystore		       = "#{default.apache_hadoop.conf_dir}/node_server_keystore.jks"
+default.oozie.keystore.password	       = "adminpw"
 

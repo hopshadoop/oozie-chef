@@ -46,7 +46,7 @@ export CATALINA_OPTS="$CATALINA_OPTS -Xmx1024m"
 
 # The port Oozie server runs if using SSL (HTTPS)
 #
-# export OOZIE_HTTPS_PORT=11443
+export OOZIE_HTTPS_PORT=<%= @my_port %>
 
 # The host name Oozie server runs on
 #
@@ -59,11 +59,11 @@ export OOZIE_HTTP_HOSTNAME=<%= @my_ip %>
 
 # The location of the keystore for the Oozie server if using SSL (HTTPS)
 #
-# export OOZIE_HTTPS_KEYSTORE_FILE=${HOME}/.keystore
+export OOZIE_HTTPS_KEYSTORE_FILE=<%= @my_keystore %>
 
 # The password of the keystore for the Oozie server if using SSL (HTTPS)
 #
-# export OOZIE_HTTPS_KEYSTORE_PASS=password
+export OOZIE_HTTPS_KEYSTORE_PASS=<%= @my_keystore_pass %>
 
 # The Oozie Instance ID
 #
