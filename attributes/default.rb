@@ -2,6 +2,7 @@ include_attribute "kagent"
 include_attribute "apache_hadoop"
 include_attribute "hops"
 include_attribute "hadoop_spark"
+include_attribute "hopsworks"
 
 
 default.oozie.version                  = "4.2.0"
@@ -13,6 +14,5 @@ default.oozie.dir                      = "/srv"
 default.oozie.base_dir                 = "/srv/oozie-" + "#{node.oozie.version}"
 default.oozie.home                     = "/srv/oozie"
 default.oozie.https.port	       = 11443
-default.oozie.keystore		       = "#{default.apache_hadoop.conf_dir}/node_server_keystore.jks"
-default.oozie.keystore.password	       = "adminpw"
-
+default.oozie.keystore		       = "#{node.kagent.keystore_dir}/node_server_keystore.jks"
+default.oozie.keystore.password	       = node.hopsworks.master.password 
