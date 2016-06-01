@@ -16,8 +16,8 @@ default.oozie.home                     = "/srv/oozie"
 
 
 default.oozie.email.smtp               = node.hopsworks.smtp
-default.oozie.email.smtp.username      = ""
-default.oozie.email.smtp.port          = 587
-default.oozie.email.smtp.password      = ""
+default.oozie.email.smtp_username      = ""
+default.oozie.email.smtp_port          = 587
+default.oozie.email.smtp_password      = ""
 # email address of sender
-default.oozie.email.from.address       = ""
+default.oozie.email.from_address       = ""
