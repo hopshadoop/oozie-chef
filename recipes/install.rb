@@ -1,4 +1,22 @@
 
+
+user node.oozie.user do
+  supports :manage_home => true
+  home "/home/#{node.oozie.user}"
+  action :create
+  system true
+  shell "/bin/bash"
+  not_if "getent passwd #{node.oozie.user}"
+end
+
+group node.oozie.group do
+  action :modify
+   members ["#{node.oozie.user}"]
+  append true
+end
+
+
+
 package_url = "#{node.oozie.url}"
 base_package_filename = File.basename(package_url)
 cached_package_filename = "/tmp/binary/#{base_package_filename}"
