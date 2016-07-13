@@ -11,9 +11,10 @@ bash 'create_oozie_db' do
     EOF
 end
 
+wfDir = "/Workflows"
+wfLibDir = "#{wfDir}/lib"
 
-
-tmp_dirs   = ["#{node.apache_hadoop.hdfs.user_home}/#{node.oozie.user}", "/Workflows", "/Worflows/lib"]
+tmp_dirs   = ["#{node.apache_hadoop.hdfs.user_home}/#{node.oozie.user}", wfDir, wfLibDir]
 for d in tmp_dirs
  apache_hadoop_hdfs_directory d do
     action :create
@@ -31,7 +32,7 @@ apache_hadoop_hdfs_directory "#{spark_jar}" do
   owner node.oozie.user
   group node.oozie.group
   mode "1775"
-  dest "/Worksflows/lib"
+  dest wfLibDir
 end
 
 
