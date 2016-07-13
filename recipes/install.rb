@@ -1,5 +1,4 @@
 
-
 user node.oozie.user do
   supports :manage_home => true
   home "/home/#{node.oozie.user}"
