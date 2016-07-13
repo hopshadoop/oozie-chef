@@ -8,7 +8,7 @@ bash "create_oozie_shared_libs" do
     user node.oozie.user
     cwd node.oozie.home
     code <<-EOF
-    ./bin/oozie-setup.sh sharelib create -fs hdfs://#{@new_resource.nn}
+    ./bin/oozie-setup.sh sharelib create -fs hdfs://#{new_resource.nn}
     touch #{gd}
 EOF
 gd
