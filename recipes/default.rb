@@ -107,7 +107,7 @@ end
 
 firstNN = private_recipe_ip("apache_hadoop", "nn") + ":#{node.apache_hadoop.nn.port}"
 
-oozie_db do
+oozie_db "firstNameNode" do
   nn firstNN
   action :create
 end
