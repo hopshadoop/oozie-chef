@@ -13,10 +13,19 @@ end
 
 depends 'java'
 
-recipe "oozie::default", "Installs and configures Oozie Server"
+recipe "oozie::install", "Installs Oozie Server binaries"
+recipe "oozie::default", "Configures Oozie Server"
+
+attribute "java/jdk_version",
+          :description =>  "Jdk version",
+          :type => 'string'
+
+attribute "java/install_flavor",
+          :description =>  "Oracle (default) or openjdk",
+          :type => 'string'
 
 attribute "oozie/user",
-:description => "User to run Oozie server as",
-:type => "string"
+          :description => "User to run Oozie server as",
+          :type => "string"
 
 

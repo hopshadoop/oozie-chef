@@ -14,7 +14,7 @@ group node.oozie.group do
   append true
 end
 
-
+include_recipe "java"
 
 package_url = "#{node.oozie.url}"
 base_package_filename = File.basename(package_url)

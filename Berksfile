@@ -9,3 +9,4 @@ cookbook 'apache_hadoop', github: "hopshadoop/apache-hadoop-chef", branch: "mast
 cookbook 'hadoop_spark', github: "hopshadoop/spark-chef", branch: "master"
 cookbook 'flink', github: "hopshadoop/flink-chef", branch: "master"
 cookbook 'hopsworks', github: "hopshadoop/hopsworks-chef", branch: "master"
+cookbook 'java'
